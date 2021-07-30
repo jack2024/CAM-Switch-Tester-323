@@ -454,7 +454,6 @@ void loop()
   
   // **** Test Read ADC Temp  ****************//
   
-
   if((flagreadtemp)&&(play ==0))
   {
     flagreadtemp = 0; 
