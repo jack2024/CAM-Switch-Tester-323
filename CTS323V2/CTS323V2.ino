@@ -444,8 +444,8 @@ void setup()
   delay(100); 
   digitalWrite(BUZZER, HIGH); //BUZZER OFF
   delay(500);
-  digitalWrite(FAN1, HIGH); // FAN1 OFF
-  digitalWrite(FAN2, HIGH); // FAN2 OFF
+  //digitalWrite(FAN1, HIGH); // FAN1 OFF
+  //digitalWrite(FAN2, HIGH); // FAN2 OFF
 
 }
 int sensorValue = 0;
@@ -453,6 +453,7 @@ void loop()
 {
   
   // **** Test Read ADC Temp  ****************//
+  
 
   if((flagreadtemp)&&(play ==0))
   {
@@ -470,7 +471,6 @@ void loop()
       digitalWrite(RELAY4_2, HIGH);
       play = 0;
     } 
-
   }
   
   // *****************************************//
