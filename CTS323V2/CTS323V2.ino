@@ -220,7 +220,6 @@ void serialEvent()  {
   }
 }
 
-
 // The Interrupt Service Routine for Pin Change Interrupt 2
 // This routine will only be called on any signal change on K0 and K1: exactly where we need to check.
 // $0016 PCINT2 PCINT16:23 – PK0:7 Pin Change Interrupt Request 2
@@ -454,7 +453,7 @@ void loop()
   
   // **** Test Read ADC Temp  ****************//
   
-  
+/*  
   if((flagreadtemp)&&(play ==0))
   {
     flagreadtemp = 0; 
@@ -472,9 +471,10 @@ void loop()
       play = 0;
     } 
   }
+ */
   
   // *****************************************//
-  
+
   float ohmraw;
   uint16_t mcpdata =0 , buffreadtemp =0;
   
@@ -590,7 +590,7 @@ void loop()
       }
     }
     
-    
+/*    
     if(++loopcount > readnum)
     {
 		// jj 7/4/21
@@ -622,7 +622,9 @@ void loop()
         lcd1.setCursor(0, 3);lcd1.print("Scan         :");
       } */
       
-    }         
+    }
+*/
+	
     delay(100); 
   }
   else
@@ -1038,7 +1040,7 @@ unsigned char readrotary(void)
 void readmode(void)
 {
   static byte oldmode ;
-  if(digitalRead(Mode))
+  if(!digitalRead(Mode))
   {
     workmode = STAN;
   }
